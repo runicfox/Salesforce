@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label></label>
+        <name>BMCServiceDesk__LinkRecords</name>
+    </fieldSets>
+    <fieldSets>
+        <label></label>
+        <name>FSL__Emergency_Account_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label></label>
+        <name>FSL__Gantt_Lightbox</name>
+    </fieldSets>
+    <fieldSets>
+        <label></label>
+        <name>SE_Lead_Convert_Duplicate_Check</name>
+    </fieldSets>
+    <layouts>
+        <layout>Account (Billing Team)</layout>
+        <sections>
+            <label></label>
+            <section>Accpac Account Number</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Service Related Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Stats</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account (Feed Based)</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account (Feed Based) Customer Service</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account (Feed Based) System Admin</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Community Account Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Hidden Fields via FLS</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Bill To (Feed Based) Customer Service &amp; Order Entry</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Bill To Administrators</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Bill To Billing Team</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Bill To Field Service Dispatcher</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Bill To Master Data</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Bill To New Master Data</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Bill To Sales Operations</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Bill To Standard</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Ship To (Feed Based) Customer Service &amp; Order Entry</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Multi-Res Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>ringDNA Data</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Ship To Administrators</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Multi-Res Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Ship To Score Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Ship To Billing Team</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>ringDNA Data</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Ship To Field Service Dispatcher</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Ship To Master Data</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Ship To New Master Data</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Multi- Res Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Ship To Sales Operations</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>ringDNA Data</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Ship To Standard</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Multi-Res Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>ringDNA Data</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>External Account Layout</layout>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FSL Account Layout</layout>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Prospect (Feed Based)</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>ringDNA Data</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Prospect Administrators</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Prospect Standard</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Additional Market Data</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>ringDNA Data</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sales Layout</layout>
+        <sections>
+            <label></label>
+            <section>AccPac Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Credit Status</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoicing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Charts</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Account_Status</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Account_Summary</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>CustomerCancellation</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Emergency_Dispatch_Wizard</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Reports_for_CS</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Service_Plan_Manager</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Account_Information_Change</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Bill_Amend</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Cancellation_All_Locations</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Cancellation_This_Location</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Change_Service</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Emergency</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Finance</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_General_Inquiry</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_New_Order</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Ownership_Change</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Site_Survey_Update</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>WO_Generation</name>
+    </quickActions>
+    <recordTypes>
+        <label></label>
+        <name>Account</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Customer_Bill_To</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Customer_Ship_To</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>FSL_Internal_Account</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>AccPac_AP_Contact_Phone_30_Characters</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>AccPac_Account_Name_50_Chars</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>AccPac_BillingCity_30_Characters</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>AccPac_Fax_30_Characters</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>AccPac_InvoicingEmailAddr_50_Characters</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>AccPac_Phone_30_Characters</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>AccPac_ShippingCity_30_Characters</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>AccPac_Website_100_Characters</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Bill_To_AccPac_Cannot_Have_Parent</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Bill_To_Record_Type_Cannot_Have_Parent</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Billing_Address_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Billing_Country_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Competitors_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Invoicing_Email_Address</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Mandatory_AP_Contact</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Mandatory_Industry_Code_Accpac</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Mandatory_Invoice_Preference</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Other_Comp_required_Notes</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Parent_Must_Have_Same_Account_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Permission_Set_Needed_Do_Not_Integrate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Permission_Set_Needed_IntegrationStatus</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Phone</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Prospect_Cannot_Have_AccPac</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Require_Contract_Price_Hold_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Sales_Pricebook_cant_be_Standard</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Ship_To_Record_Type_Must_Have_Parent</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Shipping_Address_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Shipping_Country_Required</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Find_Nearest_Driver</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Loop__LOOP</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Loop__LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Loop__LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Loop__Mass_LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Loop__Mass_LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Renewal_Contract_English</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Renewal_Contract_French</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Report_Bill_To_Integration_Fields_to_Accpac</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Report_Ship_To_Integration_Fields_to_Accpac</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>View_Ship_to_Standing_Orders</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>dsfs__Verify_with_DNB</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>maps__AdvRouteVisitWindows</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>pi__Send_To_Prospect_Insight</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>ringdna100__Billing</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>spanning__SpanningAccountRestore</name>
+    </webLinks>
+</CustomObjectTranslation>

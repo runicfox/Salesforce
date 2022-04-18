@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAutoProcUser>false</caseAutoProcUser>
+    <caseFeedItemSettings>
+        <characterLimit>400</characterLimit>
+        <displayFormat>Default</displayFormat>
+        <feedItemType>EmailMessageEvent</feedItemType>
+    </caseFeedItemSettings>
+    <caseFeedReadUnreadLtng>false</caseFeedReadUnreadLtng>
+    <caseMergeInLightning>false</caseMergeInLightning>
+    <closeCaseThroughStatusChange>true</closeCaseThroughStatusChange>
+    <defaultCaseFeedLayoutOn>true</defaultCaseFeedLayoutOn>
+    <defaultCaseOwner>Customer_Success</defaultCaseOwner>
+    <defaultCaseOwnerType>Queue</defaultCaseOwnerType>
+    <emailToCase>
+        <enableE2CAttachmentAsFile>false</enableE2CAttachmentAsFile>
+        <enableE2CSourceTracking>true</enableE2CSourceTracking>
+        <enableEmailToCase>true</enableEmailToCase>
+        <enableHtmlEmail>false</enableHtmlEmail>
+        <enableOnDemandEmailToCase>true</enableOnDemandEmailToCase>
+        <enableThreadIDInBody>true</enableThreadIDInBody>
+        <enableThreadIDInSubject>true</enableThreadIDInSubject>
+        <notifyOwnerOnNewCaseEmail>true</notifyOwnerOnNewCaseEmail>
+        <overEmailLimitAction>Requeue</overEmailLimitAction>
+        <preQuoteSignature>false</preQuoteSignature>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - clientsupport@citronhygiene.com</caseOrigin>
+            <caseOwner>Commercial_Pest</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>clientsupport@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Client Support</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - customerservice@citronhygiene.com</caseOrigin>
+            <caseOwner>Customer_Success</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>customerservice@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Customer Service</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - customersuccess@citronhygiene.com</caseOrigin>
+            <caseOwner>Customer_Success</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>customersuccess@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Customer Success</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - salessolutions@citronhygiene.com</caseOrigin>
+            <caseOwner>Inside_Sales</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>High</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>salessolutions@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Inside Sales</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - multirespest@citronhygiene.com</caseOrigin>
+            <caseOwner>Multi_Res_Pest</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>multirespest@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Multi-Res Pest</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - orders@citronhygiene.com</caseOrigin>
+            <caseOwner>Product_Orders</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>orders@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Orders</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - pestadmin@citronhygiene.com</caseOrigin>
+            <caseOwner>Multi_Res_Pest</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>pestadmin@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Pest Admin</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - service-excellence@citronhygiene.com</caseOrigin>
+            <caseOwner>Service_Excellence_Queue</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>service-excellence@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Quebec CS Operation</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - salesforcesupport@citronhygiene.com</caseOrigin>
+            <caseOwner>Application_Support_Team_Queue</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>salesforcesupport@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Salesforce Support</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - sub-contractors@citronhygiene.com</caseOrigin>
+            <caseOwner>Sub_Contractors_Queue</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>sub-contractors@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Sub-Contractors Queue</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - ar@citronhygiene.com</caseOrigin>
+            <caseOwner>Accounts_Receivable</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>ar@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>ar@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - billing@citronhygiene.com</caseOrigin>
+            <caseOwner>Customer_Billing_Inquiry</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>billing@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>billing@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - cashapps@citronhygiene.com</caseOrigin>
+            <caseOwner>Cash_application</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>cashapps@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>cashapps@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - chemicalservices@citronhygiene.com</caseOrigin>
+            <caseOwner>Chemical_Services</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>chemicalservices@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>chemicalservices@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - eft@citronhygiene.com</caseOrigin>
+            <caseOwner>Cash_application</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>eft@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>eft@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - hygienelondon@citronhygiene.com</caseOrigin>
+            <caseOwner>Hygiene_London</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>hygienelondon@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>hygienelondon@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - hygieneottawa@citronhygiene.com</caseOrigin>
+            <caseOwner>Hygiene_Ottawa</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>hygieneottawa@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>hygieneottawa@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - hygienetoronto@citronhygiene.com</caseOrigin>
+            <caseOwner>Hygiene_Toronto</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>hygienetoronto@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>hygienetoronto@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - info.chemical@citronhygiene.com</caseOrigin>
+            <caseOwner>Chemical_Services_Internal</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>info.chemical@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>info.chemical@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - pest_po@citronhygiene.com</caseOrigin>
+            <caseOwner>Pest_PO</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>pest_po@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>pest_po@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - pestlondon@citronhygiene.com</caseOrigin>
+            <caseOwner>Pest_London</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>pestlondon@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>pestlondon@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - pestottawa@citronhygiene.com</caseOrigin>
+            <caseOwner>Pest_Ottawa</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>pestottawa@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>pestottawa@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - pesttoronto@citronhygiene.com</caseOrigin>
+            <caseOwner>Pest_Toronto</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>pesttoronto@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>pesttoronto@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - po@citronhygiene.com</caseOrigin>
+            <caseOwner>Billing_Team</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>po@citronhygiene.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>po@citronhygiene.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <unauthorizedSenderAction>Discard</unauthorizedSenderAction>
+    </emailToCase>
+    <enableCaseFeed>true</enableCaseFeed>
+    <enableCaseSwarming>false</enableCaseSwarming>
+    <enableCollapseEmailThread>true</enableCollapseEmailThread>
+    <enableDraftEmails>false</enableDraftEmails>
+    <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
+    <enableEmailActionDefaultsHandler>false</enableEmailActionDefaultsHandler>
+    <enableEscalateQfiToCaseInternal>false</enableEscalateQfiToCaseInternal>
+    <enableEscalateQfiToCaseNetworks>false</enableEscalateQfiToCaseNetworks>
+    <enableExtNetworksCaseFeedEnabled>false</enableExtNetworksCaseFeedEnabled>
+    <enableMultiLangSolnSrchCSS>false</enableMultiLangSolnSrchCSS>
+    <enableMultiLangSolnSrchPKB>false</enableMultiLangSolnSrchPKB>
+    <enableMultiLangSolution>false</enableMultiLangSolution>
+    <enableSolutionCategory>false</enableSolutionCategory>
+    <enableSolutionInlineCategory>true</enableSolutionInlineCategory>
+    <enableSolutionShortSummary>true</enableSolutionShortSummary>
+    <enableSuggestedArticlesApplication>false</enableSuggestedArticlesApplication>
+    <enableSuggestedArticlesCustomerPortal>false</enableSuggestedArticlesCustomerPortal>
+    <enableSuggestedArticlesPartnerPortal>false</enableSuggestedArticlesPartnerPortal>
+    <enableSuggestedSolutions>false</enableSuggestedSolutions>
+    <escalateCaseBefore>false</escalateCaseBefore>
+    <keepRecordTypeOnAssignmentRule>true</keepRecordTypeOnAssignmentRule>
+    <notifyContactOnCaseComment>false</notifyContactOnCaseComment>
+    <notifyDefaultCaseOwner>false</notifyDefaultCaseOwner>
+    <notifyOwnerOnCaseComment>true</notifyOwnerOnCaseComment>
+    <notifyOwnerOnCaseOwnerChange>false</notifyOwnerOnCaseOwnerChange>
+    <showEmailAttachmentsInCaseAttachmentsRL>true</showEmailAttachmentsInCaseAttachmentsRL>
+    <showFewerCloseActions>true</showFewerCloseActions>
+    <systemUserEmail>hejaz@citronhygiene.com</systemUserEmail>
+    <useSystemEmailAddress>true</useSystemEmailAddress>
+    <useSystemUserAsDefaultCaseUser>true</useSystemUserAsDefaultCaseUser>
+    <visibleInCssCheckbox>false</visibleInCssCheckbox>
+    <webToCase>
+        <enableWebToCase>false</enableWebToCase>
+    </webToCase>
+</CaseSettings>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Customer Success Work Order Layout</layout>
+        <sections>
+            <label>Dirección</label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Message to Technician (Appears In Work Order Overview)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Dispatcher (Feed Based)</layout>
+        <sections>
+            <label>Dirección</label>
+            <section>Address</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>External Work Order Layout</layout>
+        <sections>
+            <label></label>
+            <section>Address</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>External Work Order Layout Restricted</layout>
+        <sections>
+            <label></label>
+            <section>Address</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>QA Work Order Layout</layout>
+        <sections>
+            <label></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Assigned Resources</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>QA Notes</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Quality Assurance</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Related Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>QA Work Order Layout Restricted</layout>
+        <sections>
+            <label></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Assigned Resources</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>QA Notes</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Quality Assurance</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Related Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Work Order Layout</layout>
+        <sections>
+            <label></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Assigned Resources</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Priority Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Work Order Layout - Dispatcher</layout>
+        <sections>
+            <label></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Assigned Resources</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Barcode Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Priority Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Work Order Layout - Sales</layout>
+        <sections>
+            <label></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Assigned Resources</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Work Order Layout Restricted</layout>
+        <sections>
+            <label></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Assigned Resources</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Related Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Cancel_Work_Order</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Change_Status</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Complete_Repair</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Create_New_Location</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Log_Parking_Ticket</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Service_Appointment</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Quick_Actions</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Request_Action_on_Contact</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Change_Service</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_General_Inquiry</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_New_Lead_Business</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_New_Product_Order</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Repair_Request</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Work</name>
+    </quickActions>
+</CustomObjectTranslation>

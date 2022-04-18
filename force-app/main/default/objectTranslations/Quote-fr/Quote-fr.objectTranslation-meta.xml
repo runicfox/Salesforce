@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Quote Layout</layout>
+        <sections>
+            <label></label>
+            <section>Price Model</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Quebec Taxes</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Terms and Conditions</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Auto_Create_PDF</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Select_Template</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Send_With_DocuSign</name>
+    </quickActions>
+</CustomObjectTranslation>

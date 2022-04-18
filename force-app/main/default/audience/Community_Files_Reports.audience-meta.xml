@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>Community Files &amp; Reports</audienceName>
+    <container>customer</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <entityField>$User.Portal_Files_Reports__c</entityField>
+                <entityType>User</entityType>
+                <fieldValue>true</fieldValue>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>FieldBased</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>7637af2f-d9c0-4533-b3f7-703628813997</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Home_Files_Reports_Page</targetValue>
+        </target>
+        <target>
+            <groupName>0ca66bcc-fbc1-4f8f-a9ad-2fe70bc11fb6</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Files_Reports_Files_Reports_Page</targetValue>
+        </target>
+    </targets>
+</Audience>

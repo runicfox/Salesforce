@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Work Order Location</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Work Order Locations</value>
+    </caseValues>
+    <layouts>
+        <layout>FSL Work Order Room Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Scanning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FSL Work Order Room Layout - Non Pest</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Scanning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FSL Work Order Room Layout - Pest</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Scanning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Work Order Room Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Scanning</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Change_Location_Status</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Create_Work_Order_Line_Item</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Door_Scan</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Log_Infestation</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>NOB_Scan</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Scan_In</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Scan_Out</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Repair_Request</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Require_Cannot_Complete_Reason</name>
+    </validationRules>
+</CustomObjectTranslation>

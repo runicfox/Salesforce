@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Issue</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Issues</value>
+    </caseValues>
+    <layouts>
+        <layout>Data Layout</layout>
+        <sections>
+            <label></label>
+            <section>Business Impact</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Data Issue Definition</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Issue Layout</layout>
+        <sections>
+            <label></label>
+            <section>Change Management Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Issue Definition</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Priority - Business Impact Drivers</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Release Management</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Resolution - Commitment Drivers</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Resolution - Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Testing Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Non Technical Layout</layout>
+        <sections>
+            <label></label>
+            <section>Change Management Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Issue Definition</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Priority - Business Impact Drivers</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Resolution - Commitment Drivers</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Resolution - Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Break_Fix</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Data</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Enhancement</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Non_Technical</name>
+    </recordTypes>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>BRD_Attached_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CRM_Impact_Required_based_on_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Cost_OneTime_Required_on_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Cost_Rec_Required_on_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Current_Org_Required_Based_on_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FSL_Impact_Required_based_on_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Failed_Prod_Testing_Requires_Info</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Failed_Sandbox_Testing_Requires_Info</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Integration_Impact_Required_on_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Production_Testing_Status_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Requirement_Type_Required_on_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Resolution_Type_Required_on_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Sandbox_Testing_Status_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Status_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Testing_Owner_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

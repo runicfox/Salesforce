@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Quote Line Item Layout</layout>
+        <sections>
+            <label></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Pest Control</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Pricing Summary</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>Customer Bill To</audienceName>
+    <container>customer</container>
+    <criteria>
+        <criterion>
+            <criterionValue>
+                <entityField>RecordType.Id</entityField>
+                <entityType>Account</entityType>
+                <fieldValue>Account.Customer_Bill_To</fieldValue>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>FieldBased</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>3128faec-71ab-4e91-8a07-065005880ddf</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Account_Detail_Customer_Bill_To_Page</targetValue>
+        </target>
+    </targets>
+</Audience>

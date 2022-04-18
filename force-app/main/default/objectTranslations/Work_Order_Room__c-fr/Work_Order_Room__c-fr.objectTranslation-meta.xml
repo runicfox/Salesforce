@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Emplacement du bon de travail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Emplacements du bon de travail</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>FSL Work Order Room Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Scanning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FSL Work Order Room Layout - Non Pest</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Scanning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FSL Work Order Room Layout - Pest</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Scanning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Work Order Room Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Scanning</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom de l&apos;emplacement du bon de travail</nameFieldLabel>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Changer le statut de l&apos;emplacement</label>
+        <name>Change_Location_Status</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Créer un nouvel item sur le bon de travail</label>
+        <name>Create_Work_Order_Line_Item</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Scanner la porte</label>
+        <name>Door_Scan</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Log_Infestation</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Pas de code barre</label>
+        <name>NOB_Scan</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Scanner à l&apos;entrée</label>
+        <name>Scan_In</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Scanner à la sortie</label>
+        <name>Scan_Out</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Ticket Demande de reparation</label>
+        <name>Ticket_Repair_Request</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Require_Cannot_Complete_Reason</name>
+    </validationRules>
+</CustomObjectTranslation>

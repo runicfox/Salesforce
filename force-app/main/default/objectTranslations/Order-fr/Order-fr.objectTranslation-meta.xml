@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>FSL Order Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Order Summary</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Seasonal Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tax info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Order Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Order Summary</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Origination</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Pest Emergency Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Seasonal Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tax Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Order Layout (Customer Success)</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Order Summary</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Origination</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Pest Emergency Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Seasonal Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tax Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Order Layout (External)</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Order Summary</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tax Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Order Layout Sales</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Order Summary</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Origination</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Seasonal Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tax Info</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Add_Product</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Create_Child_Order</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Emergency_Dispatch_Wizard</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Emergency_Work_Order</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Mass_Edit_Order_Products</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Resend_PO_Confirmation</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Évaluation du site</label>
+        <name>Site_Survey</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Ticket_Finance</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>WO_Generation</name>
+    </quickActions>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Regular_Order</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Shopping_Cart_Order</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Cannot_Create_On_Inactive_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Fill_in_PONumber_field_to_Activate_Order</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Pest_Emergency_Order_Cannot_be_Activated</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>RequireStartandEndDates</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Restrict_Pest_Emergency_Not_Invoicing</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Validate_Account_and_Existing_Opp</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>check_if_is_related_contact</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>Conga_Composer_Renewal_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Renewal_Contract</name>
+    </webLinks>
+</CustomObjectTranslation>
