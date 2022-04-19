@@ -46,6 +46,20 @@ public class TestAccountObjectTriggers {
         insert insertedAccounts;
     }
     
+    
+    @isTest static void assignSubsidiary() {
+        List<Account> accounts = [SELECT Id,RecordType.DeveloperName, Subsidiary__c FROM Account];
+        for(Account acc: accounts) {
+            if(acc.RecordType.DeveloperName == 'US'){
+                system.assertEquals('US' , acc.Subsidiary__c);
+            }else if(acc.RecordType.DeveloperName == 'UK') {
+                system.assertEquals('UK' , acc.Subsidiary__c);
+            }else{
+                system.assertEquals('CA' , acc.Subsidiary__c);
+            }
+        }
+    }
+    
     static testMethod void testStampRegion() {
         Map <String, FSA_To_Postal_Code__mdt> fsaToPostalCodeMap = FSA_To_Postal_Code__mdt.getAll();
         Map<String, Id> fsaMapping = new Map<String, Id>();
