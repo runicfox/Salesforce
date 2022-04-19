@@ -2,8 +2,13 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
   
   <types>
-    <members>Case</members>
-    <name>CustomObject</name>
+    <members>ManageRelatedCaseRecordsTest</members>
+    <name>ApexClass</name>
+  </types>
+
+  <types>
+    <members>ManageRelatedCaseRecords</members>
+    <name>ApexTrigger</name>
   </types>
   
   <version>52.0</version>

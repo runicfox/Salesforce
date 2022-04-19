@@ -39,7 +39,7 @@ trigger ManageRelatedCaseRecords on Case (after insert, after update) {
         update opUpdates;
     }
     
-    if(!rejectedOppCase.isEmpty()&&!Test.isRunningTest()){
+    if(!rejectedOppCase.isEmpty()){
         for(Opportunity o : [Select Id, OwnerId from Opportunity where id = :rejectedOppCase.keySet()]){
             String caseMessage =  rejectedOppCase.get(o.Id);
             System.debug('NETWORK ID:' + Network.getNetworkId());
