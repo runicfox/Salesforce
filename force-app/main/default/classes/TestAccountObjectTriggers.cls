@@ -31,8 +31,18 @@ public class TestAccountObjectTriggers {
         
         TestDataFactory.crtAcctContact(4, 1);
         accounts = TestDataFactory.accounts;
-        
+        Map<String, Schema.RecordTypeInfo> recordTypes = Schema.SObjectType.Account.getRecordTypeInfosByName();
+        system.debug('recordTypes ' + recordTypes);
         List<Account> insertedAccounts = TestDataFactory.createAccounts();
+        for(Account acc: insertedAccounts) {
+            if(acc.Subsidiary__c == 'US') {
+              acc.RecordTypeId = recordTypes.get('US').getRecordTypeId();  
+            }else if(acc.Subsidiary__c == 'UK') {
+              acc.RecordTypeId = recordTypes.get('UK').getRecordTypeId();    
+            }else{
+               acc.RecordTypeId = recordTypes.get('Customer Bill To').getRecordTypeId(); 
+            }    
+        }
         insert insertedAccounts;
     }
     
