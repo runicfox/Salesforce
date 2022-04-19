@@ -32,30 +32,28 @@ public class TestAccountObjectTriggers {
         TestDataFactory.crtAcctContact(4, 1);
         accounts = TestDataFactory.accounts;
         Map<String, Schema.RecordTypeInfo> recordTypes = Schema.SObjectType.Account.getRecordTypeInfosByName();
-        system.debug('recordTypes ' + recordTypes);
         List<Account> insertedAccounts = TestDataFactory.createAccounts();
-        for(Account acc: insertedAccounts) {
-            if(acc.Subsidiary__c == 'US') {
-              acc.RecordTypeId = recordTypes.get('US').getRecordTypeId();  
-            }else if(acc.Subsidiary__c == 'UK') {
-              acc.RecordTypeId = recordTypes.get('UK').getRecordTypeId();    
-            }else{
-               acc.RecordTypeId = recordTypes.get('Customer Bill To').getRecordTypeId(); 
-            }    
+        List<String> recTypes = new List<String>{'US', 'UK', 'Customer Bill To'};
+        for(Integer i=0; i<insertedAccounts.size(); i++) {
+            insertedAccounts[i].RecordTypeId = recordTypes.get(recTypes[i]).getRecordTypeId();
         }
         insert insertedAccounts;
     }
     
     
     @isTest static void assignSubsidiary() {
-        List<Account> accounts = [SELECT Id,RecordType.DeveloperName, Subsidiary__c FROM Account];
+        List<Account> accounts = [SELECT Id,RecordType.Name, Subsidiary__c FROM Account];
         for(Account acc: accounts) {
-            if(acc.RecordType.DeveloperName == 'US'){
-                system.assertEquals('US' , acc.Subsidiary__c);
-            }else if(acc.RecordType.DeveloperName == 'UK') {
-                system.assertEquals('UK' , acc.Subsidiary__c);
-            }else{
-                system.assertEquals('CA' , acc.Subsidiary__c);
+            switch on acc.RecordType.Name {
+                when 'US' {
+                    System.assertEquals('US', acc.Subsidiary__c, 'US Subsidiary value not correctly assigned for Record Type ' + acc.RecordType.Name);
+                }
+                when 'UK' {
+                    System.assertEquals('UK', acc.Subsidiary__c, 'UK Subsidiary value not correctly assigned for Record Type ' + acc.RecordType.Name);
+                }
+                when else {
+                    System.assertEquals('CA', acc.Subsidiary__c, 'CA Subsidiary value not correctly assigned for Record Type ' + acc.RecordType.Name);
+                }
             }
         }
     }
