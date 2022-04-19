@@ -31,9 +31,30 @@ public class TestAccountObjectTriggers {
         
         TestDataFactory.crtAcctContact(4, 1);
         accounts = TestDataFactory.accounts;
-        
+        List<RecordType> recordTypes = [SELECT Id FROM RecordType WHERE SobjectType = 'Account' AND IsActive = TRUE];
         List<Account> insertedAccounts = TestDataFactory.createAccounts();
+        for(Integer i=0; i<insertedAccounts.size(); i++) {
+            insertedAccounts[i].RecordTypeId = recordTypes[i].Id;
+        }
         insert insertedAccounts;
+    }
+    
+    
+    @isTest static void assignSubsidiary() {
+        List<Account> accounts = [SELECT Id,RecordType.Name, Subsidiary__c FROM Account];
+        for(Account acc: accounts) {
+            switch on acc.RecordType.Name {
+                when 'US' {
+                    System.assertEquals('US', acc.Subsidiary__c, 'US Subsidiary value not correctly assigned for Record Type ' + acc.RecordType.Name);
+                }
+                when 'UK' {
+                    System.assertEquals('UK', acc.Subsidiary__c, 'UK Subsidiary value not correctly assigned for Record Type ' + acc.RecordType.Name);
+                }
+                when else {
+                    System.assertEquals('CA', acc.Subsidiary__c, 'CA Subsidiary value not correctly assigned for Record Type ' + acc.RecordType.Name);
+                }
+            }
+        }
     }
     
     static testMethod void testStampRegion() {
