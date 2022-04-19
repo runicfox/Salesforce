@@ -1,12 +1,14 @@
-
-
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
   <types>
-    <members>*</members>
-    <name>AccessControlPolicy</name>
+    <members>ManageRelatedCaseRecordsTest</members>
+    <name>ApexClass</name>
   </types>
   <types>
+    <members>ManageRelatedCaseRecords</members>
+    <name>ApexTrigger</name>
+  </types>
+<!--  <types>
     <members>*</members>
     <name>ActionLinkGroupTemplate</name>
   </types>
@@ -629,7 +631,7 @@
   <types>
     <members>*</members>
     <name>Workflow</name>
-  </types>
+  </types> -->
   <version>52.0</version>
 </Package>
 
