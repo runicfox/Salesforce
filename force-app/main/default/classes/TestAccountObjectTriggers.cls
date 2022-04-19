@@ -31,11 +31,10 @@ public class TestAccountObjectTriggers {
         
         TestDataFactory.crtAcctContact(4, 1);
         accounts = TestDataFactory.accounts;
-        Map<String, Schema.RecordTypeInfo> recordTypes = Schema.SObjectType.Account.getRecordTypeInfosByName();
+        List<RecordType> recordTypes = [SELECT Id FROM RecordType WHERE SobjectType = 'Account' AND IsActive = TRUE];
         List<Account> insertedAccounts = TestDataFactory.createAccounts();
-        List<String> recTypes = new List<String>{'US', 'UK', 'Customer Bill To'};
         for(Integer i=0; i<insertedAccounts.size(); i++) {
-            insertedAccounts[i].RecordTypeId = recordTypes.get(recTypes[i]).getRecordTypeId();
+            insertedAccounts[i].RecordTypeId = recordTypes[i].Id;
         }
         insert insertedAccounts;
     }
