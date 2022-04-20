@@ -28,6 +28,10 @@
             <outputField>CPL_Code__c</outputField>
         </mappingFields>
         <mappingFields>
+            <inputField>US2_FromConversion__c</inputField>
+            <outputField>US2_FromConversion__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>Industry_Code_Accpac__c</inputField>
             <outputField>Industry_Code_Accpac__c</outputField>
         </mappingFields>
@@ -62,6 +66,10 @@
         <mappingFields>
             <inputField>Other_Competitor_Notes__c</inputField>
             <outputField>Other_Competitor_Notes__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Subsidiary__c</inputField>
+            <outputField>Subsidiary__c</outputField>
         </mappingFields>
         <outputObject>Account</outputObject>
     </objectMapping>
