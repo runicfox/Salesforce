@@ -31,6 +31,107 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>US2_CopyCity</fullName>
+        <field>ShippingCity</field>
+        <formula>BillingCity</formula>
+        <name>Copy City</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>US2_CopyCountry</fullName>
+        <field>ShippingCountry</field>
+        <formula>BillingCountry</formula>
+        <name>Copy Country</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>US2_CopyLat</fullName>
+        <field>ShippingLatitude</field>
+        <formula>BillingLatitude</formula>
+        <name>Copy Lat</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>US2_CopyLong</fullName>
+        <field>ShippingLongitude</field>
+        <formula>BillingLongitude</formula>
+        <name>Copy Long</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>US2_CopyState</fullName>
+        <field>ShippingState</field>
+        <formula>BillingState</formula>
+        <name>Copy State</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>US2_CopyStreet</fullName>
+        <field>ShippingStreet</field>
+        <formula>BillingStreet</formula>
+        <name>Copy Street</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>US2_CopyZip</fullName>
+        <field>ShippingPostalCode</field>
+        <formula>BillingPostalCode</formula>
+        <name>Copy Zip</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>US2_CreateStampName</fullName>
+        <field>US2_LocationName__c</field>
+        <formula>Name</formula>
+        <name>Stamp Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>US2_Mark_Billing_for_Blanking</fullName>
+        <field>US2_RemoveBillingAddress__c</field>
+        <literalValue>1</literalValue>
+        <name>US2 Mark Billing for Blanking</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>US2_StampName</fullName>
+        <description>Stamps account location name</description>
+        <field>Name</field>
+        <formula>US2_LocationName__c &amp; &apos; - &apos; &amp; ShippingStreet &amp; &apos;, &apos; &amp; ShippingCity &amp; &apos;, &apos; &amp; ShippingState &amp; &apos; &apos; &amp; ShippingPostalCode</formula>
+        <name>Stamp Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Update_Contract_Price_Hold</fullName>
         <field>Contract_Price_Hold__c</field>
         <literalValue>No Price Hold</literalValue>
@@ -81,6 +182,24 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <rules>
+        <fullName>Set Customer Converted Date</fullName>
+        <actions>
+            <name>Set_Converted_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.GP_Customer_ID__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Subsidiary__c</field>
+            <operation>equals</operation>
+            <value>US</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
         <fullName>Set to Customer</fullName>
         <actions>
             <name>Set_Converted_Date</name>
@@ -97,6 +216,86 @@
         </criteriaItems>
         <description>Set to customer when AccPac number is added.</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>US2 Handle Conversion Address</fullName>
+        <actions>
+            <name>US2_CopyCity</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>US2_CopyCountry</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>US2_CopyLat</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>US2_CopyLong</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>US2_CopyState</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>US2_CopyStreet</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>US2_CopyZip</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>US2_CreateStampName</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>US2_Mark_Billing_for_Blanking</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.US2_FromConversion__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.US2_RemoveBillingAddress__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.ShippingStreet</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Subsidiary__c</field>
+            <operation>equals</operation>
+            <value>US,UK</value>
+        </criteriaItems>
+        <description>Stamps Shipping Address and Sets base location name</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>US2_StampName</fullName>
+        <actions>
+            <name>US2_StampName</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.US2_LocationName__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Subsidiary__c</field>
+            <operation>equals</operation>
+            <value>US,UK</value>
+        </criteriaItems>
+        <description>Stamps the account name</description>
+        <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
         <fullName>ringdna100__Unset Account RingDNA Context</fullName>
