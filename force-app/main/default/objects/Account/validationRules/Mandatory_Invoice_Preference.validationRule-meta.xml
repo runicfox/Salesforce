@@ -3,7 +3,26 @@
     <fullName>Mandatory_Invoice_Preference</fullName>
     <active>true</active>
     <description>Customers require an Invoice Preference</description>
-    <errorConditionFormula>AND( Is_Bill_To__c, ISBLANK(TEXT( Invoice_Preference__c )) , ISPICKVAL( Type , &quot;Customer&quot;), CASESAFEID($User.ProfileId) &lt;&gt; $Setup.Field_Service_Settings__c.Integration_User_Profile__c )</errorConditionFormula>
+    <errorConditionFormula>OR(
+  AND( 
+   Is_Bill_To__c, ISBLANK(TEXT( Invoice_Preference__c )) , 
+   ISPICKVAL( Type , &quot;Customer&quot;), CASESAFEID($User.ProfileId) &lt;&gt; 
+   $Setup.Field_Service_Settings__c.Integration_User_Profile__c,
+   ISPICKVAL( Subsidiary__c , &apos;CA&apos;) 
+ ),
+  AND( 
+    ISBLANK(TEXT( Invoice_Preference__c )) , 
+    ISPICKVAL( Type , &quot;Customer&quot;), 
+    CASESAFEID($User.ProfileId) &lt;&gt; 
+   $Setup.Field_Service_Settings__c.Integration_User_Profile__c,  
+    ISPICKVAL( Subsidiary__c , &apos;US&apos;) 
+  ),
+  AND(
+   ISBLANK(TEXT( Invoice_Preference__c )) ,
+   ISPICKVAL( Type , &quot;Customer&quot;),
+   ISPICKVAL( Subsidiary__c , &apos;UK&apos;) 
+  )
+)</errorConditionFormula>
     <errorDisplayField>Invoice_Preference__c</errorDisplayField>
     <errorMessage>Invoice Preference is required for customers</errorMessage>
 </ValidationRule>
