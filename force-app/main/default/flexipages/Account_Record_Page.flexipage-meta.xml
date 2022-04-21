@@ -30,6 +30,13 @@
         <itemInstances>
             <componentInstance>
                 <componentName>MyServicesExtended</componentName>
+                 <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Subsidiary__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>CA</rightValue>
+                    </criteria>
+                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <name>Facet-a58fbdcb-2dc7-4f52-a0c7-ea182939dd76</name>
