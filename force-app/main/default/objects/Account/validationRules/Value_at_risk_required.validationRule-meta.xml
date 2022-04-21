@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_at_risk_required</fullName>
+    <active>true</active>
+    <description>If account is flagged as at risk a value must be entered</description>
+    <errorConditionFormula>ISPICKVAL (Status__c,&quot;At risk&quot;)&amp;&amp; 
+ISBLANK(Value_at_Risk__c)  &amp;&amp; ISPICKVAL ( Subsidiary__c ,&quot;UK&quot;)</errorConditionFormula>
+    <errorDisplayField>Value_at_Risk__c</errorDisplayField>
+    <errorMessage>Please enter an value a at risk</errorMessage>
+</ValidationRule>
