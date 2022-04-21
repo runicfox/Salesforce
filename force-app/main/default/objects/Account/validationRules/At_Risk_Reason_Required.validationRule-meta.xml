@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>At_Risk_Reason_Required</fullName>
+    <active>true</active>
+    <description>If account status is marked at &quot;At Risk&quot; then sub reason is needed</description>
+    <errorConditionFormula>ISPICKVAL( Status__c ,&quot;At risk&quot;)&amp;&amp;
+ISPICKVAL( Sub_Status__c ,&quot;&quot; )  &amp;&amp; 
+ISPICKVAL( Subsidiary__c ,&quot;UK&quot;)</errorConditionFormula>
+    <errorDisplayField>Sub_Status__c</errorDisplayField>
+    <errorMessage>You must select a reason for account being at risk</errorMessage>
+</ValidationRule>
