@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Termination Notification - Full Account</fullName>
+                <default>false</default>
+                <label>Termination Notification - Full Account</label>
+            </value>
+            <value>
+                <fullName>Termination Notification - Part Account</fullName>
+                <default>false</default>
+                <label>Termination Notification - Part Account</label>
+            </value>
+            <value>
+                <fullName>Change of Ownership / Takeover/ 3rd Party Contract Changenge of Ownership or Takeover</fullName>
+                <default>false</default>
+                <label>Change of Ownership / Takeover/ 3rd Party Contract Change</label>
+            </value>
+            <value>
+                <fullName>Company in Administration / Building Closure</fullName>
+                <default>false</default>
+                <label>Company in Administration / Building Closure</label>
+            </value>
+            <value>
+                <fullName>Poor Service Highlighted</fullName>
+                <default>false</default>
+                <label>Poor Service Highlighted</label>
+            </value>
+            <value>
+                <fullName>Copy Contract requested</fullName>
+                <default>false</default>
+                <label>Copy Contract requested</label>
+            </value>
+            <value>
+                <fullName>Competitor Activity</fullName>
+                <default>false</default>
+                <label>Competitor Activity</label>
+            </value>
+            <value>
+                <fullName>Renewal / In Tender -  Major Account</fullName>
+                <default>false</default>
+                <label>Renewal / In Tender -  Major Account</label>
+            </value>
+            <value>
+                <fullName>Renewal / In Tender -  Regional Account</fullName>
+                <default>false</default>
+                <label>Renewal / In Tender -  Regional Account</label>
+            </value>
+            <value>
+                <fullName>Debt Identified</fullName>
+                <default>false</default>
+                <label>Debt Identified</label>
+            </value>
+            <value>
+                <fullName>At Risk - Service Watch</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>At Risk - Service Watch</label>
+            </value>
+            <value>
+                <fullName>Contract end date within 3 months</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contract end date within 3 months</label>
+            </value>
+            <value>
+                <fullName>Contract past its end date</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contract past its end date</label>
+            </value>
+            <value>
+                <fullName>In Tender</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>In Tender</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Termination Notification - Full Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Termination Notification - Part Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Change of Ownership / Takeover/ 3rd Party Contract Changenge of Ownership or Takeover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Company in Administration / Building Closure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Poor Service Highlighted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Copy Contract requested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Competitor Activity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Renewal / In Tender -  Major Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Renewal / In Tender -  Regional Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Debt Identified</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
