@@ -11,6 +11,17 @@
         <template>Price_Hold_Approval/Price_Hold_Approved</template>
     </alerts>
     <alerts>
+        <fullName>Send_email_to_credit_request_team</fullName>
+        <description>Send email to credit request team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jcoates@citronhygiene.com.ca</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Credit_Check_Form</template>
+    </alerts>
+    <alerts>
         <fullName>Send_Price_Hold_Reject</fullName>
         <description>Send Price Hold Reject</description>
         <protected>false</protected>
@@ -20,6 +31,17 @@
         <senderType>CurrentUser</senderType>
         <template>Price_Hold_Approval/Price_Hold_Rejected</template>
     </alerts>
+    <fieldUpdates>
+        <fullName>Update_CC_status</fullName>
+        <description>Update the Credit Check Status field.</description>
+        <field>Credit_Check_Status__c</field>
+        <literalValue>In Process</literalValue>
+        <name>Update CC status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
     <fieldUpdates>
         <fullName>Set_Converted_Date</fullName>
         <field>Converted_to_Customer_Date__c</field>
@@ -310,5 +332,28 @@
             <value>True</value>
         </criteriaItems>
         <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Credit Request Email</fullName>
+        <actions>
+            <name>Send_email_to_credit_request_team</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Update_CC_status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Request_Credit_Check__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Subsidiary__c</field>
+            <operation>equals</operation>
+            <value>UK</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
 </Workflow>
