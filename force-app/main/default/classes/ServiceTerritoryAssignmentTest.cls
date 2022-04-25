@@ -2,12 +2,15 @@
 private with sharing class ServiceTerritoryAssignmentTest { 
     @testSetup
     static void setup() {
-        List<Account> accounts = new List<Account>();
+        List<Account>  listOfAccounts = TestDataFactory.createAccounts(3);
         List<FSA_Service_Territory_Mapping__c> listOfFSAServiceTerritory = new List<FSA_Service_Territory_Mapping__c>();
         listOfFSAServiceTerritory = TestDataFactory.createFSAServiceTerritoryMapping();
         insert listOfFSAServiceTerritory;
-        accounts = TestDataFactory.createAcocuntWithSubsidiaryCA();
-        insert accounts;
+        for(Account ac : listOfAccounts){
+            ac.Subsidiary__c ='CA';
+            ac.Service_Territory__c = null;
+        }
+        insert listOfAccounts;
     }
  
     @isTest

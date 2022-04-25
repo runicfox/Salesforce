@@ -35,7 +35,7 @@ public class AccountTriggerHandler extends TriggerHandler {
     }
     
     protected override void beforeInsert(){
-        System.debug('==BEFORE INSERT==');
+         assignSubsidiary(listnewAccounts);
         //set shipping address from billing
         copyBillingAddressToShippingAddress();
         
@@ -48,7 +48,7 @@ public class AccountTriggerHandler extends TriggerHandler {
         //stamp FSA based on shipping postalcode
         stampRegion();
 
-        assignSubsidiary(listnewAccounts);
+      
     }
     
     
