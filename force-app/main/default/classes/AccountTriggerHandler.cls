@@ -348,11 +348,14 @@ public class AccountTriggerHandler extends TriggerHandler {
         Map<String,String> mpFSAToSTer = new Map<String,String>();
         //Run through the newly created accounts
         for(Account acc:listnewAccounts){
-            //If no service territory is entered and a shipping postal code is available
-            if(acc.Service_Territory__c==null && acc.ShippingPostalCode!=null){
-                //Capture the first 3 characters of postal code
-                if(acc.ShippingPostalCode.length()>3){setpostalcode.add(acc.ShippingPostalCode.subString(0,3));}
-            }
+              //If Account's Subsidiary is CA then will be entered inside the condition
+            if(acc.Subsidiary__c == 'CA'){
+                //If no service territory is entered and a shipping postal code is available
+                if(acc.Service_Territory__c==null && acc.ShippingPostalCode!=null){
+                    //Capture the first 3 characters of postal code
+                    if(acc.ShippingPostalCode.length()>3){setpostalcode.add(acc.ShippingPostalCode.subString(0,3));}
+                }
+            }    
         }
         
         if(setpostalcode.size()>0){
@@ -369,11 +372,14 @@ public class AccountTriggerHandler extends TriggerHandler {
         if(mpFSAToSTer.size()>0){
             //Again run through the newly created accounts
             for(Account acc:listnewAccounts){
-                if(acc.Service_Territory__c==null && acc.ShippingPostalCode!=null){
-                    if(acc.ShippingPostalCode.length()>3){
-                        String shipzip = acc.ShippingPostalCode.subString(0,3);
-                        //Set the Service territory for the account
-                        acc.Service_Territory__c = mpFSAToSTer.get(shipzip.toUpperCase());               
+                    //If Account's Subsidiary is CA then will be entered inside the condition
+                if(acc.Subsidiary__c == 'CA'){
+                    if(acc.Service_Territory__c==null && acc.ShippingPostalCode!=null){
+                        if(acc.ShippingPostalCode.length()>3){
+                            String shipzip = acc.ShippingPostalCode.subString(0,3);
+                            //Set the Service territory for the account
+                            acc.Service_Territory__c = mpFSAToSTer.get(shipzip.toUpperCase());               
+                        }
                     }
                 }
             }

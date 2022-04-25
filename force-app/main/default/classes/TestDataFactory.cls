@@ -1060,4 +1060,74 @@ public class TestDataFactory {
             insert oppLineItems;
         }
     }
+    
+    /*
+         @CreatedBy: Mohammad Rafi
+         @CreatedDate: 24-04-2022
+         @Description:This method used to cover setServiceTerritoryIns method of AccountTriggerHandler
+    */
+    public static List<Account> createAcocuntWithSubsidiaryCA(){
+        //Initialize potal code to use while inserting FSA_Service_Territory_Mapping__c record.
+        List<String> postalCode1 = new List<String>{ '005L', 'A1AL', 'L3RL' };
+        RecordTypeInfo prospectRecordType = Account.getSObjectType().getDescribe().getRecordTypeInfosByName().get('Prospect'); 
+        List<Account> listOfAccount = new List<Account>();
+         for (Integer i = 0; i < 3; i++) {
+            Account acct =new Account();
+            acct.Name = 'TestAccount' + i;
+            acct.A_P_Contact_Name__c = 'TestContactName';
+            acct.Credit_Check__c = 'Completed';
+            acct.Subsidiary__c ='CA';
+            acct.Industry = 'Institutions';
+            acct.Industry_Code_Accpac__c = '000-00 UNKNOWN';
+            acct.Invoice_Preference__c = 'Email';
+            acct.Invoicing_Email_Address__c = 'Test@test.com';
+            acct.LEED_Customer__c = 'No';
+            acct.Type = 'Prospect';
+            acct.Phone = '123456789';
+            acct.Billing_Suite_Number__c = '1';
+            acct.BillingStreet = 'Street';
+            acct.BillingCity = 'Toronto';
+            acct.BillingState = 'ON';
+            acct.BillingPostalCode = postalCode1[i];
+            acct.BillingCountry = 'CA';
+            acct.Shipping_Suite_Number__c = '1';
+            acct.ShippingStreet = 'Street';
+            acct.ShippingCity = 'Toronto';
+            acct.ShippingState = 'ON';
+            acct.ShippingPostalCode = postalCode1[i];
+            acct.ShippingCountry = 'CA';
+            acct.RecordTypeId = prospectRecordType.getRecordTypeId();
+            acct.Invoice_Frequency__c = 'M - Monthly';
+            acct.Service_Territory__c = null;
+            acct.Invoice_Generation__c = 'Bill at Beginning of Invoice Frequency';
+            listOfAccount.add(acct);
+        }
+        return listOfAccount;
+    }
+    
+    /*
+         @CreatedBy: Mohammad Rafi
+         @CreatedDate: 24-04-2022
+         @Description:This method used to cover setServiceTerritoryIns method of AccountTriggerHandler
+    */
+    public static List<FSA_Service_Territory_Mapping__c> createFSAServiceTerritoryMapping(){
+        crtOperatingHrs();
+        crtSrvTerritory();
+        crtServiceBranch();
+        //Initialize potal code to use while inserting FSA_Service_Territory_Mapping__c record.
+        List<String> postalCode1 = new List<String>{ '005', 'A1A', 'L3R' };
+        for (Integer i = 0; i < 3; i++) {
+            listFsa.add(
+                new FSA_Service_Territory_Mapping__c(
+                    FSA__C = postalCode1[i],
+                    Name = 'TestFSA',
+                    Province__c = 'Ontario',
+                    CPQ_Service_Branch__c = listSrvBranch[0].Id,
+                    Service_Territory__c = srvTers[1].Id,
+                    CPQ_Service_Zone__c = '1'
+                )
+            );
+        }
+        return listFsa;
+    }
 }
