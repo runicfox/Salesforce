@@ -1,0 +1,11 @@
+{!Account.Link}
+
+Account Name - {!Account.Name}
+
+Company Registration Number - {!Account.Company_Reg__c}
+
+Legal Entity Address -    {!Account.BillingStreet}, {!Account.BillingCity}, {!Account.BillingState}, {!Account.BillingPostalCode}, {!Account.BillingCountry}
+
+Requested by - {!Account.LastModifiedBy}
+
+Date - {!Account.LastModifiedDate}
