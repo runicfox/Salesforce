@@ -3,7 +3,7 @@
     <fullName>Subsidiary__c</fullName>
     <externalId>false</externalId>
     <formula>TEXT(Account.Subsidiary__c)</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <formulaTreatBlanksAs></formulaTreatBlanksAs>
     <label>Subsidiary</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
