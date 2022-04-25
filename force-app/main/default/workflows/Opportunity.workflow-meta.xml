@@ -191,6 +191,17 @@
         <targetObject>AccountId</targetObject>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Update_Account_Type</fullName>
+        <field>Type</field>
+        <literalValue>Customer</literalValue>
+        <name>Update Account Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>AccountId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Update_Op_Name</fullName>
         <field>Name</field>
         <formula>Account.Name &amp; &quot; - &quot; &amp;  TEXT(Opportunity_Type__c) &amp; &quot; - &quot; &amp; TEXT(CloseDate)</formula>
@@ -409,17 +420,19 @@
             <type>Alert</type>
         </actions>
         <active>false</active>
-        <formula>AND( 
-    OR( 
-        (Owner.UserRoleId = &apos;00Ej0000000E40O&apos;),(Owner.UserRoleId = &apos;00Ej0000000E3yD&apos;)
-      ), 
-      (
-      OR
-        ( 
-          (ISPICKVAL(Account.Type, &quot;Prospect&quot;)), (ISPICKVAL( StageName , &quot;Signed&quot;))
-        )
-        ))</formula>
+        <formula>AND( OR( (Owner.UserRoleId = &apos;00Ej0000000E40O&apos;),(Owner.UserRoleId = &apos;00Ej0000000E3yD&apos;) ), (  OR  (  (ISPICKVAL(Account.Type, &quot;Prospect&quot;)), (ISPICKVAL( StageName , &quot;Signed&quot;)) )  ))</formula>
         <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Account Type</fullName>
+        <actions>
+            <name>Update_Account_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update Account Type</description>
+        <formula>AND(   ISPICKVAL(StageName, &apos;Signed&apos;) ,   ISPICKVAL( Processing_Status__c ,&apos;Completed&apos;),ISPICKVAL( Account.Subsidiary__c  , &apos;CA&apos;) )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
         <fullName>Update OP Name</fullName>
