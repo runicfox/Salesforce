@@ -3,7 +3,9 @@
     <fullName>No_Stage_Change_for_Signed_Opportunity</fullName>
     <active>true</active>
     <description>An Opportunity that is signed cannot change its stage</description>
-    <errorConditionFormula>AND(AND( TEXT( StageName ) = $Setup.Field_Service_Settings__c.Opportunity_Case_Rejection_Stage_Name__c , 
+    <errorConditionFormula>AND(
+ Subsidiary__c = &apos;CA&apos;,
+AND( TEXT( StageName ) = $Setup.Field_Service_Settings__c.Opportunity_Case_Rejection_Stage_Name__c , 
 ISCHANGED(StageName ) , 
 TEXT( PRIORVALUE( StageName ) ) &lt;&gt; 
 $Setup.Field_Service_Settings__c.Opportunity_Case_Creation_Stage_Name__c),AND( TEXT( StageName ) = $Setup.Field_Service_Settings__c.Opportunity_Case_Rejection_Stage_Name__c , 
