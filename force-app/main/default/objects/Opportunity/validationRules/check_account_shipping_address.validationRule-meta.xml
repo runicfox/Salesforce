@@ -3,6 +3,7 @@
     <fullName>check_account_shipping_address</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
+ Subsidiary__c = &apos;CA&apos;,
 OR( ISNEW() ,  ISCHANGED(ForecastCategoryName) ),
 (RecordTypeId !=
 $Setup.Field_Service_Settings__c.Opportunity_RecordType_Frequency_Change__c) ,
