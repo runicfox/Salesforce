@@ -9,23 +9,6 @@
     <type>Picklist</type>
     <valueSet>
         <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>US</fullName>
-                <default>false</default>
-                <label>US</label>
-            </value>
-            <value>
-                <fullName>UK</fullName>
-                <default>false</default>
-                <label>UK</label>
-            </value>
-            <value>
-                <fullName>CA</fullName>
-                <default>false</default>
-                <label>CA</label>
-            </value>
-        </valueSetDefinition>
+        <valueSetName>Subsidiaries</valueSetName>
     </valueSet>
 </CustomField>
