@@ -19,7 +19,7 @@ public class AccountUtil{
         Map<Id,Boolean> MapParentIsParent = new Map<Id,Boolean>();
         
         for(Account acc : accountList){
-            if(oldMap == null || acc.ParentId != oldMap.get(acc.Id).ParentId) {
+            if(acc.Subsidiary__c == 'CA' && (oldMap == null || acc.ParentId != oldMap.get(acc.Id).ParentId )) {
                 setAccountId.add(acc.Id); //Current Account
                 setParentId.add(acc.ParentId); //Current Account's Parent
                 setParentAndChildId.add(acc.Id);
