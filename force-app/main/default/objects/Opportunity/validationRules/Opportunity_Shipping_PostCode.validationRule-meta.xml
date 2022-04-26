@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Shipping_PostCode</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    Subsidiary__c = &apos;UK&apos;,
+OR(
+AND(
+NOT(ISNEW()),
+ISBLANK(ShipTo_Zip_Postal_Code__c),
+NOT(ShipTo_same_as_Legal_Entity__c),
+ISCHANGED(StageName)
+),
+AND(
+ShipTo_same_as_Legal_Entity__c,
+ISBLANK(Account.BillingPostalCode)
+)
+))</errorConditionFormula>
+    <errorMessage>Ship To postcode is required. If same as legal entity then postcode on account is required.</errorMessage>
+</ValidationRule>
