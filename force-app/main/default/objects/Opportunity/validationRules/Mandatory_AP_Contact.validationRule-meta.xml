@@ -5,6 +5,7 @@
     <errorConditionFormula>OR (
   AND(
     Account.Is_Bill_To__c, 
+    Subsidiary__c = &apos;CA&apos;,
     ISBLANK(Account.A_P_Contact_Name__c), 
     OR (ISPICKVAL( ForecastCategoryName, &quot;Commit&quot;), IsWon),
     $Profile.Name != &apos;System Administrator&apos;
@@ -12,6 +13,7 @@
   ), 
   AND(
     NOT(Account.Is_Bill_To__c), 
+    Subsidiary__c = &apos;CA&apos;,
     ISBLANK(Account.Parent.A_P_Contact_Name__c), 
     OR (ISPICKVAL( ForecastCategoryName, &quot;Commit&quot;), IsWon),
     $Profile.Name != &apos;System Administrator&apos;
