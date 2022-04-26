@@ -4,6 +4,7 @@
     <active>true</active>
     <errorConditionFormula>AND(
 Account.Is_Bill_To__c,
+Subsidiary__c = &apos;CA&apos;,
 Account.isParent__c,
 $Profile.Name != &apos;System Administrator&apos;
 )</errorConditionFormula>
