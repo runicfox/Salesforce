@@ -3,6 +3,7 @@
     <fullName>check_parent_billing_address_fields</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
+ Subsidiary__c = &apos;CA&apos;,
 NOT(ISBLANK( Account.ParentId )) ,
 OR( ISNEW() ,  ISCHANGED(ForecastCategoryName) ),
 (RecordTypeId !=
