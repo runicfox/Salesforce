@@ -4,6 +4,7 @@
     <active>true</active>
     <description>If stage is &apos;Signed Awaiting Site Survey Approval&apos; we need to lock the record.</description>
     <errorConditionFormula>AND(
+ Subsidiary__c = &apos;CA&apos;,
     AND($Profile.Name  &lt;&gt; &apos;Sales Operations&apos;, 
         $Profile.Name  &lt;&gt; &apos;Sales VP&apos;,
         $Profile.Name  &lt;&gt; &apos;System Administrator&apos;),
