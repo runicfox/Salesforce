@@ -4,6 +4,7 @@
     <active>true</active>
     <description>Prevent users from changing Stage &apos;Closed-Site Survey Rejected&apos; to any other except &apos;Signed Awaiting Site Survey Approval&apos;</description>
     <errorConditionFormula>AND( 
+ Subsidiary__c = &apos;CA&apos;,
 ISCHANGED(StageName), 
 (Text(PRIORVALUE(StageName)) = &apos;Closed - Site Survey Rejected&apos;), 
 NOT((Text(StageName)=&apos;Signed Awaiting Survey Approval&apos;)), 
