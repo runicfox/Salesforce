@@ -4,6 +4,7 @@
     <active>true</active>
     <description>User must complete the Account LEED field prior to close winning an opportunity</description>
     <errorConditionFormula>AND( 
+Subsidiary__c = &apos;CA&apos;,
 ISCHANGED(StageName), 
 OR(
 Text(PRIORVALUE(StageName)) &lt;&gt;  $Setup.Field_Service_Settings__c.Opportunity_Case_Creation_Stage_Name__c , 
