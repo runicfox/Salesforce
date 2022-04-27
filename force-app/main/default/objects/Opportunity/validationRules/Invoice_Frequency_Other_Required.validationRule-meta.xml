@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Frequency_Other_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ Subsidiary__c = &apos;UK&apos;,
+ISPICKVAL(Invoice_Frequency__c , &quot;Other (please state)&quot;),
+ISBLANK( Invoice_Frequency_Other__c )
+)</errorConditionFormula>
+    <errorMessage>Please fill in &quot;Invoice Frequency Other&quot;</errorMessage>
+</ValidationRule>
