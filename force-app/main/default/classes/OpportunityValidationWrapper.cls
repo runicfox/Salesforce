@@ -43,23 +43,27 @@ public inherited sharing class OpportunityValidationWrapper {
     public void validateOpportunitiesBeforeInsert() {
         TriggerHelper.checkIfInsert = true;
         for (Opportunity opp : opportunityRecords) {
-            if(opp.RecordTypeId != QueryUtils.fieldServiceSettings.Opportunity_RecordType_Frequency_Change__c) {
-                if (opp.StageName == QueryUtils.fieldServiceSettings.Opportunity_To_Order_Creation_Stage_Name__c) {
-                    validateClosedWonStage(opp);
-                    validateSiteSurvey(opp);
+            if(opp.Subsidiary__c == 'CA'){ 
+                if(opp.RecordTypeId != QueryUtils.fieldServiceSettings.Opportunity_RecordType_Frequency_Change__c) {
+                    if (opp.StageName == QueryUtils.fieldServiceSettings.Opportunity_To_Order_Creation_Stage_Name__c) {
+                        validateClosedWonStage(opp);
+                        validateSiteSurvey(opp);
+                    }
                 }
-            }
-            else {
-                checkOrderCreationStage(opp);
+                else {
+                    checkOrderCreationStage(opp);
+                }
             }
         }
 
         for(Opportunity opp : opportunityRecords) {
-            Account a = dataWrapper.accountMap.get(opp.AccountId);
+            if(opp.Subsidiary__c == 'CA'){
+                Account a = dataWrapper.accountMap.get(opp.AccountId);
 
-            if (a == null) continue;
+                if (a == null) continue;
 
-            //validateAccount(opp, a);
+                //validateAccount(opp, a);
+            }
         }
     }
     
@@ -70,7 +74,7 @@ public inherited sharing class OpportunityValidationWrapper {
         if(QueryUtils.fieldServiceSettings.System_Administrator_Profile_Id__c == UserInfo.getProfileId()){
         	return;
         }
-        for(OpportunityContactRole ocr: [SELECT Id, Role FROM OpportunityContactRole WHERE OpportunityId IN :opportunityRecords]) {
+        for(OpportunityContactRole ocr: [SELECT Id, Role FROM OpportunityContactRole WHERE OpportunityId IN :opportunityRecords and Opportunity.Subsidiary__c = 'CA']) {
             lstOcr.add(ocr);
             If(ocr.Role == null) {
                 checkEmptyRole = true;
@@ -79,61 +83,67 @@ public inherited sharing class OpportunityValidationWrapper {
         if(lstOcr.size() == 0 || checkEmptyRole) {
             for (Opportunity opp : opportunityRecords) { 
                 //Darcy 2021-05-27 exception for ownership changes
-               	Opportunity oldRec = oldMap.get(opp.Id);
-            	Boolean ownerChange = opp.OwnerId != oldRec.OwnerId;
-                if(!TriggerHelper.checkIfInsert && !ownerChange)
-                    opp.addError(Label.OCREmptyCheck);
+                if(opp.Subsidiary__c == 'CA'){
+                    Opportunity oldRec = oldMap.get(opp.Id);
+                    Boolean ownerChange = opp.OwnerId != oldRec.OwnerId;
+                    if(!TriggerHelper.checkIfInsert && !ownerChange)
+                        opp.addError(Label.OCREmptyCheck);
+                }
             }
         }
     }
 
     public void validateOpportunitiesBeforeUpdate() {
         for (Opportunity opp : opportunityRecords) {
-            Opportunity oldRec = oldMap.get(opp.Id);
+            if(opp.Subsidiary__c == 'CA') {     
+                Opportunity oldRec = oldMap.get(opp.Id);
 
-            Boolean stageChange = opp.StageName != oldRec.StageName;
+                Boolean stageChange = opp.StageName != oldRec.StageName;
 
-            if(QueryUtils.fieldServiceSettings.System_Administrator_Profile_Id__c != UserInfo.getProfileId()){
-                checkForInactiveLineItems(opp);
+                if(QueryUtils.fieldServiceSettings.System_Administrator_Profile_Id__c != UserInfo.getProfileId()){
+                    checkForInactiveLineItems(opp);
 
-                if(stageChange) {
-                    checkPrimaryContact(opp);
-                    validateLineItemFrequency(opp);
-                }
-            }
-
-            if (opp.RecordTypeId != QueryUtils.fieldServiceSettings.Opportunity_RecordType_Frequency_Change__c) {
-                if(stageChange) {
-                    if (opp.StageName == QueryUtils.fieldServiceSettings.Opportunity_To_Order_Creation_Stage_Name__c) {
-                        validateClosedWonStage(opp);
-
-                        if(oldRec.StageName != QueryUtils.fieldServiceSettings.Opportunity_Case_Creation_Stage_Name__c) {
-                            validateSiteSurveyApproval(opp);
-                        }
-
-                        validateSiteSurvey(opp);
+                    if(stageChange) {
+                        checkPrimaryContact(opp);
+                        validateLineItemFrequency(opp);
                     }
                 }
-            }
-            else if (oldRec.StageName != QueryUtils.fieldServiceSettings.Opportunity_Frequency_Change_Stage_Name__c
-                    && oldRec.StageName != QueryUtils.fieldServiceSettings.Opportunity_To_Order_Creation_Stage_Name__c) {
-                //Darcy 2021-05-05 previously signed opp will not trigger the checkOrderCreationStage validation for Freq Change Stage name 
-                checkOrderCreationStage(opp);
-            }
+
+                if (opp.RecordTypeId != QueryUtils.fieldServiceSettings.Opportunity_RecordType_Frequency_Change__c) {
+                    if(stageChange) {
+                        if (opp.StageName == QueryUtils.fieldServiceSettings.Opportunity_To_Order_Creation_Stage_Name__c) {
+                            validateClosedWonStage(opp);
+
+                            if(oldRec.StageName != QueryUtils.fieldServiceSettings.Opportunity_Case_Creation_Stage_Name__c) {
+                                validateSiteSurveyApproval(opp);
+                            }
+
+                            validateSiteSurvey(opp);
+                        }
+                    }
+                }
+                else if (oldRec.StageName != QueryUtils.fieldServiceSettings.Opportunity_Frequency_Change_Stage_Name__c
+                        && oldRec.StageName != QueryUtils.fieldServiceSettings.Opportunity_To_Order_Creation_Stage_Name__c) {
+                    //Darcy 2021-05-05 previously signed opp will not trigger the checkOrderCreationStage validation for Freq Change Stage name 
+                    checkOrderCreationStage(opp);
+                }
+           }
         }
 
         checkSiteSurveyErrors(siteSurveyErrors);
 
         for(Opportunity opp : opportunityRecords) {
-            Account a = dataWrapper.accountMap.get(opp.AccountId);
+            if(opp.Subsidiary__c == 'CA') {  
+                Account a = dataWrapper.accountMap.get(opp.AccountId);
 
-            if (a == null) continue;
+                if (a == null) continue;
 
-            Opportunity oldRec = oldMap.get(opp.Id);
+                Opportunity oldRec = oldMap.get(opp.Id);
 
 
-            if(opp.Pricebook2Id != oldRec.Pricebook2Id) {
-                validatePricebookChange(opp, a);
+                if(opp.Pricebook2Id != oldRec.Pricebook2Id) {
+                    validatePricebookChange(opp, a);
+                }
             }
         }
     }

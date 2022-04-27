@@ -59,9 +59,11 @@ public inherited sharing class OpportunityCreateRelatedDataWrapper {
         List<OpportunityLineItem> lstoli = new List<OpportunityLineItem>();
         
         for(Opportunity opp: lstopp) {
-            priceBkId =  opp.PriceBook2Id;
-            oppBundleType = opp.SE_Opportunity_Bundle_Type__c;
-            oppId = opp.Id;
+            If(opp.Subsidiary__c == 'CA'){
+                priceBkId =  opp.PriceBook2Id;
+                oppBundleType = opp.SE_Opportunity_Bundle_Type__c;
+                oppId = opp.Id;
+            }
         }
         Map<String, BundleProductMap__mdt > mapProdExt = BundleProductMap__mdt.getAll();
         if(oppBundleType !=null && !String.ISBLANK(oppBundleType)) {
@@ -116,10 +118,12 @@ public inherited sharing class OpportunityCreateRelatedDataWrapper {
     
     public void createRelatedDataAfterUpdate() {
         for (Opportunity opp : opportunityRecords) {
-            Opportunity oldRec = oldMap.get(opp.Id);
-            
-            if (opp.StageName != oldRec.StageName) {
-                createOrder(opp.Id);
+            if(opp.Subsidiary__c == 'CA'){
+                Opportunity oldRec = oldMap.get(opp.Id);
+                
+                if (opp.StageName != oldRec.StageName) {
+                    createOrder(opp.Id);
+                }
             }
         }
         
