@@ -5,6 +5,7 @@
     <description>If the associated Account Requires a PO , PO# needs to be filled in to close/win the opportunity</description>
     <errorConditionFormula>AND( 
 ISCHANGED(StageName), 
+ Subsidiary__c = &apos;CA&apos;,
 OR(Text(PRIORVALUE(StageName)) &lt;&gt; &apos;Signed Awaiting Survey Approval&apos;, Text(PRIORVALUE(StageName)) &lt;&gt; &apos;Signed&apos;), 
 OR((Text(StageName)=&apos;Signed&apos;), (TEXT(StageName)=&apos;Signed Awaiting Survey Approval&apos;)), 
 ISPICKVAL(Account.PO_Required_for_Orders__c, &apos;PO Required Before&apos;),
