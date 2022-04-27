@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Date_Cannot_be_in_the_Past</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR( Subsidiary__c = &apos;US&apos;, Subsidiary__c = &apos;UK&apos;),
+CloseDate &lt; TODAY(),
+IsClosed = FALSE
+)</errorConditionFormula>
+    <errorMessage>The Close Date cannot be in the past for open Opportunities.</errorMessage>
+</ValidationRule>
