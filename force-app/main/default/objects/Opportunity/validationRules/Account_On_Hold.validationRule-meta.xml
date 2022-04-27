@@ -4,6 +4,7 @@
     <active>true</active>
     <errorConditionFormula>AND( 
   Account.On_Hold__c,
+   Subsidiary__c  = &apos;CA&apos;,
   IsWon,
   ISCHANGED( IsWon )
 )</errorConditionFormula>
